@@ -1,0 +1,5 @@
+Classifica auto
+1 posto: auto 3
+2 posto: auto 2
+3 posto: auto 4
+4 posto: auto 1

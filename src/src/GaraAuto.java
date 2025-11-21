@@ -6,7 +6,7 @@ public class GaraAuto {
         Giudice giudice = new Giudice();
         boolean stop = false;
         int scelta = 3;
-
+        giudice.leggiClassifica();
         while(scelta != 2 && scelta != 0) {
             System.out.println("1: inserisci un'auto 2: fai partire la gara 0: quit");
             scelta = scanner.nextInt();
@@ -17,6 +17,7 @@ public class GaraAuto {
                     break;
                 case 2:
                     giudice.inizioGara();
+                    giudice.salvaClassifica();
                     break;
                 case 0:
                     break;
