@@ -4,9 +4,10 @@ public class GaraAuto {
     public static void main(String[] args) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
         Giudice giudice = new Giudice();
+        GestoreFile file = new GestoreFile();
         boolean stop = false;
         int scelta = 3;
-        giudice.leggiClassifica();
+        file.leggiClassifica();
         while(scelta != 2 && scelta != 0) {
             System.out.println("1: inserisci un'auto 2: fai partire la gara 0: quit");
             scelta = scanner.nextInt();
@@ -17,7 +18,7 @@ public class GaraAuto {
                     break;
                 case 2:
                     giudice.inizioGara();
-                    giudice.salvaClassifica();
+                    file.salvaClassifica(giudice.getClassifica());
                     break;
                 case 0:
                     break;
